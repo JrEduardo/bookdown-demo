@@ -25,7 +25,7 @@
 
 <meta name="author" content="Yihui Xie">
 
-<meta name="date" content="2016-08-10">
+<meta name="date" content="2016-08-11">
 
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
@@ -152,6 +152,10 @@ Figure 2.1: Here is a nice figure!
 </p>
 </div>
 <p>Reference a figure by its code chunk label with the <code>fig:</code> prefix, e.g., see Figure <a href="intro.html#fig:nice-fig">2.1</a>. Similarly, you can reference tables generated from <code>knitr::kable()</code>, e.g., see Table <a href="intro.html#tab:nice-tab">2.1</a>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">## ggplot2::qplot(mpg, wt, data = mtcars, geom = &quot;path&quot;)
+## lattice::xyplot(wt ~ mpg, data = mtcars, type = &quot;s&quot;)
+<span class="kw">plot</span>(wt ~<span class="st"> </span>mpg, <span class="dt">data =</span> mtcars, <span class="dt">type =</span> <span class="st">&quot;s&quot;</span>)</code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-3-1.png" width="672" style="display: block; margin: auto;" /></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">knitr::<span class="kw">kable</span>(
   <span class="kw">head</span>(iris, <span class="dv">20</span>), <span class="dt">caption =</span> <span class="st">&#39;Here is a nice table!&#39;</span>,
   <span class="dt">booktabs =</span> <span class="ot">TRUE</span>

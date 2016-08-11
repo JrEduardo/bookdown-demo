@@ -1,4 +1,4 @@
---- 
+---
 title: "A Minimal Book Example"
 author: "Yihui Xie"
 date: "`r Sys.Date()`"
@@ -31,4 +31,11 @@ To compile this example to PDF, you need to install XeLaTeX.
 knitr::write_bib(c(
   .packages(), 'bookdown', 'knitr', 'rmarkdown'
 ), 'packages.bib')
+
+library(knitr)
+opts_chunk$set(
+    fig.align = "center",
+    dev.args = list(bg = "transparent")
+    )
+
 ```

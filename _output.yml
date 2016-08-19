@@ -4,16 +4,16 @@ bookdown::gitbook:
     toc:
       before: >
         <div id="header-toc">
-          <a style="color: #004D82" href=".">
+          <a style="color: #666" href=".">
           <img src="images/logo.png" width=100px display="block">
           <br>
           Shiny: Aplicações web com R
           </a>
         </div>
       after: |
-        <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+        <center>&copy Copyright 2016 Ribeiro Jr., E. E.</center>
     edit:
-      link: https://github.com/rstudio/bookdown-demo/edit/master/%s
+      link: https://github.com/JrEduardo/bookdown-demo/edit/master/%s
     download: [pdf, epub, mobi]
 bookdown::pdf_book:
   includes:

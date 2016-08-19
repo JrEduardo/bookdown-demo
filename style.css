@@ -20,5 +20,35 @@ pre code {
     border: 0px solid #ccc;
     margin: 10px;
     text-align: center;
-    font-size: 2em;
+    font-size: 1.4em;
+}
+
+/*------------------------------------------- */
+/* Configura o estilo do título */
+#header {
+    /* background-color: #F6F6F6; */
+    border-top: 0px solid #003A3A;
+    border-right: 0px solid black;
+    border-bottom: 0px solid #003A3A;
+    border-left: 0px solid black;
+    padding-top: 10px;
+    margin: 10px;
+}
+
+h1.title {
+    text-align: center;
+    line-height: 1;
+}
+
+h3.subtitle {
+    text-align: center;
+}
+
+h4.author {
+    text-align: center;
+    line-height: 1;
+}
+
+h4.date {
+    text-align: center;
 }

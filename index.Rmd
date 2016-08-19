@@ -15,18 +15,6 @@ cover-image: images/cover.png
 
 # Prefácio {-}
 
-This is a _sample_ book written in **Markdown**. You can use anything that Pandoc's Markdown supports, e.g., a math equation $a^2 + b^2 = c^2$.
-
-For now, you have to install the development versions of **bookdown** from Github:
-
-```{r eval=FALSE}
-devtools::install_github("rstudio/bookdown")
-```
-
-Remember each Rmd file contains one and only one chapter, and a chapter is defined by the first-level heading `#`.
-
-To compile this example to PDF, you need to install XeLaTeX.
-
 ```{r include=FALSE}
 
 ## # automatically create a bib database for R packages
@@ -41,3 +29,30 @@ opts_chunk$set(
     )
 
 ```
+
+Alguns pacotes necessários para elaboração do livro
+
+```{r eval=FALSE}
+
+devtools::install_github("rstudio/bookdown")
+devtools::install_github("rstudio/shiny")
+devtools::install_github("wch/webshot")
+webshot::install_phantomjs()
+
+```
+
+Alguns testes:
+
+```{r test-app, fig.cap="Aplicativo shiny", fig.height=7, fig.width=20, out.width='100%'}
+
+knitr::include_app(
+    "http://shiny.leg.ufpr.br/eduardo/reg_seg/",
+    height = "700px")
+
+```
+
+A Figura \@ref(fig:test-app), representa o aplicativo shiny elaborado
+para a disciplina
+[ce092](http://www.leg.ufpr.br/doku.php/disciplinas:ce092-2015-02). Note
+que a referência cruzada não funcionou muito bem aqui. Isso se deve ao
+fato de que essa seção é não numerada.

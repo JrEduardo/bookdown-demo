@@ -2,8 +2,14 @@ bookdown::gitbook:
   css: style.css
   config:
     toc:
-      before: |
-        <li><a href="./">A Minimal Book Example</a></li>
+      before: >
+        <div id="header-toc">
+          <a style="color: #004D82" href=".">
+          <img src="images/logo.png" width=100px display="block">
+          <br>
+          Shiny: Aplicações web com R
+          </a>
+        </div>
       after: |
         <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
     edit:
@@ -12,6 +18,5 @@ bookdown::gitbook:
 bookdown::pdf_book:
   includes:
     in_header: preamble.tex
-  latex_engine: xelatex
   citation_package: natbib
 bookdown::epub_book: default

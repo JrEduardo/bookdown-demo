@@ -52,3 +52,7 @@ h4.author {
 h4.date {
     text-align: center;
 }
+
+.header-section-number{
+    display: block;
+}

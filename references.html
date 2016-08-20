@@ -27,18 +27,13 @@
 <meta name="author" content="Walmes Marques Zeviani">
 
 
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  TeX: { equationNumbers: { autoNumber: "AMS" } }
-});
-</script>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="final-words.html">
+<link rel="prev" href="novos-desenvolvimentos-web-com-r.html">
 
 
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
@@ -107,7 +102,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 <ul class="summary">
 <div id="header-toc">
-  <a style="color: #004D82" href=".">
+  <a style="color: #666" href=".">
   <img src="images/logo.png" width=100px display="block">
   <br>
   Shiny: Aplicações web com R
@@ -116,17 +111,21 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prefácio</a></li>
-<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
-<li class="chapter" data-level="2" data-path="literature.html"><a href="literature.html"><i class="fa fa-check"></i><b>2</b> Literature</a></li>
-<li class="chapter" data-level="3" data-path="methods.html"><a href="methods.html"><i class="fa fa-check"></i><b>3</b> Methods</a></li>
-<li class="chapter" data-level="4" data-path="applications.html"><a href="applications.html"><i class="fa fa-check"></i><b>4</b> Applications</a><ul>
-<li class="chapter" data-level="4.1" data-path="applications.html"><a href="applications.html#example-one"><i class="fa fa-check"></i><b>4.1</b> Example one</a></li>
-<li class="chapter" data-level="4.2" data-path="applications.html"><a href="applications.html#example-two"><i class="fa fa-check"></i><b>4.2</b> Example two</a></li>
+<li class="chapter" data-level="1" data-path="o-que-e-o-shiny.html"><a href="o-que-e-o-shiny.html"><i class="fa fa-check"></i><b>1</b> O que é o Shiny?</a></li>
+<li class="chapter" data-level="2" data-path="como-comecar.html"><a href="como-comecar.html"><i class="fa fa-check"></i><b>2</b> Como começar?</a></li>
+<li class="chapter" data-level="3" data-path="construindo-aplicativos.html"><a href="construindo-aplicativos.html"><i class="fa fa-check"></i><b>3</b> Construindo aplicativos</a></li>
+<li class="chapter" data-level="4" data-path="publicando-seus-aplicativos.html"><a href="publicando-seus-aplicativos.html"><i class="fa fa-check"></i><b>4</b> Publicando seus aplicativos</a><ul>
+<li class="chapter" data-level="4.1" data-path="publicando-seus-aplicativos.html"><a href="publicando-seus-aplicativos.html#servidor-shinyapps.io"><i class="fa fa-check"></i><b>4.1</b> Servidor <code>shinyapps.io</code></a></li>
+<li class="chapter" data-level="4.2" data-path="publicando-seus-aplicativos.html"><a href="publicando-seus-aplicativos.html#shiny-server"><i class="fa fa-check"></i><b>4.2</b> Shiny-Server</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="final-words.html"><a href="final-words.html"><i class="fa fa-check"></i><b>5</b> Final Words</a></li>
+<li class="chapter" data-level="5" data-path="construindo-aplicacoes-avancadas.html"><a href="construindo-aplicacoes-avancadas.html"><i class="fa fa-check"></i><b>5</b> Construindo aplicações avançadas</a></li>
+<li class="chapter" data-level="6" data-path="novos-desenvolvimentos-web-com-r.html"><a href="novos-desenvolvimentos-web-com-r.html"><i class="fa fa-check"></i><b>6</b> Novos desenvolvimentos web com R</a><ul>
+<li class="chapter" data-level="6.1" data-path="novos-desenvolvimentos-web-com-r.html"><a href="novos-desenvolvimentos-web-com-r.html#miniui"><i class="fa fa-check"></i><b>6.1</b> MiniUI</a></li>
+<li class="chapter" data-level="6.2" data-path="novos-desenvolvimentos-web-com-r.html"><a href="novos-desenvolvimentos-web-com-r.html#htmlwidgets"><i class="fa fa-check"></i><b>6.2</b> htmlwidgets</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
-<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+<center>&copy Copyright 2016 Ribeiro Jr., E. E.</center>
 
 </ul>
 
@@ -149,9 +148,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <h1>References</h1>
 
 <div id="refs" class="references">
-<div>
-<p>Xie, Yihui. 2015. <em>Dynamic Documents with R and Knitr</em>. 2nd ed. Boca Raton, Florida: Chapman; Hall/CRC. <a href="http://yihui.name/knitr/" class="uri">http://yihui.name/knitr/</a>.</p>
-</div>
+
 </div>
 </div>
             </section>
@@ -159,7 +156,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           </div>
         </div>
       </div>
-<a href="final-words.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="novos-desenvolvimentos-web-com-r.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
 
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -187,10 +184,10 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/06-references.Rmd",
+"link": "https://github.com/JrEduardo/bookdown-demo/edit/master/references.Rmd",
 "text": null
 },
-"download": ["bookdown-demo.pdf", "bookdown-demo.epub", "bookdown-demo.mobi"],
+"download": ["bookdown-demo.pdf", "bookdown-demo.epub"],
 "toc": {
 "collapse": "subsection"
 }
@@ -198,17 +195,6 @@ gitbook.start({
 });
 </script>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
-    if (location.protocol !== "file:" && /^https?:/.test(script.src))
-      script.src  = script.src.replace(/^https?:/, '');
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
 </body>
 
 </html>

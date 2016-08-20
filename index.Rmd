@@ -24,9 +24,30 @@ cover-image: images/cover.png
 
 library(knitr)
 opts_chunk$set(
+    cache = FALSE,
     fig.align = "center",
     dev.args = list(bg = "transparent")
     )
+
+## Para que os iframes em outputs html sejam de width=100%, isso não é
+## passado nas opções de chunk, pois alteram os parâmetros de screenshot
+## do webshot e consequentemente os demais outputs
+`%n%` = function(x, y) if (is.null(x)) y else x
+wrap.knit_embed_url <- function (x, options = opts_chunk$get(),
+                                 inline = FALSE) {
+    options$fig.cur = knitr:::plot_counter()
+    options = knitr:::reduce_plot_opts(options)
+    iframe = sprintf(
+        "<iframe src=\"%s\" width=\"100%%\" height=\"%s\"></iframe>",
+        knitr:::escape_html(x$url), ## options$out.width %n% "100%",
+        x$height %n% "400px")
+    cap = knitr:::.img.cap(options)
+    if (cap == "")
+        return(iframe)
+    sprintf(
+        "<div class=\"figure\"%s>\n%s\n<p class=\"caption\">%s</p>\n</div>",
+        knitr:::css_text_align(options$fig.align), iframe, cap)
+}
 
 ```
 
@@ -43,11 +64,11 @@ webshot::install_phantomjs()
 
 Alguns testes:
 
-```{r test-app, fig.cap="Aplicativo shiny", fig.height=7, fig.width=20, out.width='100%'}
+```{r test-app, fig.cap="Aplicativo shiny", fig.height=3, fig.width=15}
 
 knitr::include_app(
     "http://shiny.leg.ufpr.br/eduardo/reg_seg/",
-    height = "700px")
+    height = "650px")
 
 ```
 
@@ -56,3 +77,9 @@ para a disciplina
 [ce092](http://www.leg.ufpr.br/doku.php/disciplinas:ce092-2015-02). Note
 que a referência cruzada não funcionou muito bem aqui. Isso se deve ao
 fato de que essa seção é não numerada.
+
+```{r}
+
+knitr::include_graphics("images/logo.png")
+
+```

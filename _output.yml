@@ -14,9 +14,10 @@ bookdown::gitbook:
         <center>&copy Copyright 2016 Ribeiro Jr., E. E.</center>
     edit:
       link: https://github.com/JrEduardo/bookdown-demo/edit/master/%s
-    download: [pdf, epub, mobi]
+    download: [pdf, epub]
 bookdown::pdf_book:
   includes:
     in_header: preamble.tex
   citation_package: natbib
+  keep_tex: yes
 bookdown::epub_book: default

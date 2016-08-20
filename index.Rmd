@@ -67,8 +67,8 @@ Alguns testes:
 ```{r test-app, fig.cap="Aplicativo shiny", fig.height=3, fig.width=15}
 
 knitr::include_app(
-    "http://shiny.leg.ufpr.br/eduardo/reg_seg/",
-    height = "650px")
+    "https://eduardojr.shinyapps.io/regressao/",
+    height = "750px")
 
 ```
 
